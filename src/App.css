@@ -1,38 +1,115 @@
-.App {
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f3f4f6;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+h1,
+h2 {
   text-align: center;
+  color: #1f2937;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  transition: border 0.2s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+textarea {
+  min-height: 150px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input:focus,
+textarea:focus {
+  border-color: #6366f1;
+  outline: none;
+}
+
+.buttons {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+button {
+  flex: 1;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 500;
   color: white;
+  background-color: #4f46e5;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #4338ca;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Style for each blog post */
+.post {
+  background: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+/* Title and delete in same row */
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.delete {
+  background-color: #ef4444;
+  color: white;
+  padding: 0.4rem 0.1rem;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: background-color 0.2s ease;
+  max-width: 12%;
+}
+
+.delete:hover {
+  background-color: #dc2626;
+}
+
+/* Markdown content inside post */
+.post p {
+  margin-top: 0.5rem;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.post em {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #6b7280;
 }
